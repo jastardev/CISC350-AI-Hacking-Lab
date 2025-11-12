@@ -14,8 +14,6 @@ A modern web application for interfacing with a small LLM (Large Language Model)
 
 ## Setup
 
-### Backend Setup
-
 1. Navigate to the backend directory:
 ```bash
 cd backend
@@ -37,25 +35,7 @@ pip install -r requirements.txt
 python app.py
 ```
 
-The backend will run on `http://localhost:5001`
-
-### Frontend Setup
-
-**Important**: The frontend must be served via HTTP (not opened directly as a file) due to CORS restrictions when communicating with the backend API.
-
-**Option 1: Python HTTP Server (Simplest)**
-```bash
-cd frontend
-python3 -m http.server 8000
-```
-
-Then open `http://localhost:8000/index.html` in your browser.
-
-**Option 2: Backend serves frontend (Recommended for development)**
-The Flask backend can also serve the frontend files. Just start the backend and visit:
-- `http://localhost:5001/` for the main chat interface
-
-This is the simplest option as you only need to run one server.
+The app will run on `http://localhost:5001`, HOWEVER, continue reading as you need to also install and run ollama
 
 ## LLM Integration (Ollama)
 
